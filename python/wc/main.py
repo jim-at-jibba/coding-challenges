@@ -64,14 +64,13 @@ def main():
         # file = open(pos_arg).read()
 
         if count_bytes:
-            count = os.stat(file_path).st_size
-            print(f"{count} {file_path}")
-            return
+            byte_count = os.stat(file_path).st_size
+            print(f"{byte_count} {file_path}")
+
         if count_lines:
             with open(file_path, "r") as file:
-                lines = file.readlines()
-                print(f"{len(lines)} {file_path}")
-            return
+                lines_count = file.readlines()
+                print(f"{len(lines_count)} {file_path}")
 
     # print(f'str_arg = "{str_arg}"')
     # print(f'int_arg = "{int_arg}"')
